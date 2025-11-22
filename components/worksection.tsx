@@ -6,18 +6,18 @@ import { Container, Row, Col } from 'react-bootstrap';
 function WorkSection() {
     const works = [
         {
-            title: "Digital Transformation",
-            description: "Helping a legacy business transition to a modern digital ecosystem.",
+            title: "Data Analysis",
+            description: "Analyzing data to provide insights and recommendations.",
             image: "/images/image-44.jpg"
         },
         {
-            title: "E-Commerce Platform",
-            description: "Building a scalable online store with seamless payment integration.",
+            title: "Data Visualization",
+            description: "Creating visualizations to help understand complex data.",
             image: "/images/image-45.jpg"
         },
         {
-            title: "Mobile Application",
-            description: "Developing a cross-platform mobile app for enhanced user engagement.",
+            title: "Data Science",
+            description: "Analyzing data to provide insights and recommendations.",
             image: "/images/image-46.jpg"
         }
     ];
