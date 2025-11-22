@@ -27,7 +27,7 @@ function WorkSection() {
             <Row className='mb-5'>
                 <Col md={12} className="text-center">
                     <h6 className="fw-bold text-uppercase letter-spacing-2" style={{ color: '#4f46e5' }}>Portfolio</h6>
-                    <h2 className="display-5 fw-bold" style={{ color: '#0f172a' }}>Our Recent Work</h2>
+                    <h2 className="display-5 fw-bold" style={{ color: '#0f172a' }}>My Recent Work</h2>
                     <p className="lead mx-auto" style={{ maxWidth: '700px', color: '#64748b' }}>
                         These are some of my recent projects that I've worked on, and I'm a Chief Executive Officer of Desa Binaan FTI UNTAR 2026.
                     </p>
