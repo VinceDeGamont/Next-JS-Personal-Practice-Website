@@ -10,8 +10,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Modern Web App",
-  description: "Enhanced UI/UX Project",
+  title: "VINCEN'S WEB PRACTICE",
+  description: "Next.js Practice With No any AI Used",
 };
 
 export default function RootLayout({
