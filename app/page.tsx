@@ -26,8 +26,8 @@ export default function Home() {
         <Container className="my-5 py-5">
           <Row className="align-items-center gx-5">
             <Col md={6} className="mb-5 mb-md-0">
-              <h6 className="text-primary fw-bold text-uppercase letter-spacing-2">About Me</h6>
-              <h2 className="display-5 fw-bold mb-4">I'm a Tech Enthusiast and a business man</h2>
+              <h6 className="text-primary fw-bold text-uppercase letter-spacing-2">About Me - VINCEN OKTA RAMADHAN | 535240064</h6>
+              <h2 className="display-5 fw-bold mb-4">I'm a Tech Enthusiast and a Business Man</h2>
               <p className="lead text-muted mb-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus assumenda, necessitatibus veniam vitae deleniti, quos nulla obcaecati eligendi nihil hic cum ex.
               </p>
