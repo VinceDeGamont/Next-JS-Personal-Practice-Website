@@ -1,12 +1,83 @@
 :root {
+  /* Primary Color Palette - Deep Blue with excellent contrast */
+  --primary: #2563eb;
+  /* Blue 600 - Better contrast than indigo */
+  --primary-hover: #1d4ed8;
+  /* Blue 700 */
+  --primary-light: #dbeafe;
+  /* Blue 50 */
+  --primary-dark: #1e40af;
+  /* Blue 800 */
+
+  /* Accent Color - Vibrant yet professional */
+  --accent: #f59e0b;
+  /* Amber 500 - Better than pink for readability */
+  --accent-hover: #d97706;
+  /* Amber 600 */
+
+  /* Neutral Palette - Enhanced readability */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #111827;
+  /* Gray 900 - Darker for better contrast */
+  --muted: #6b7280;
+  /* Gray 500 - More readable */
+  --muted-foreground: #4b5563;
+  /* Gray 600 - Darker for body text */
+  --light: #f9fafb;
+  /* Gray 50 - Subtle background */
+  --dark: #1f2937;
+  /* Gray 800 */
+
+  /* Semantic Colors */
+  --success: #10b981;
+  /* Emerald 500 */
+  --warning: #f59e0b;
+  /* Amber 500 */
+  --error: #ef4444;
+  /* Red 500 */
+  --info: #3b82f6;
+  /* Blue 500 */
+
+  /* Border and Shadow */
+  --border: #e5e7eb;
+  /* Gray 200 */
+  --border-hover: #d1d5db;
+  /* Gray 300 */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* Typography */
+  --font-poppins: 'Poppins', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0f172a;
+    /* Slate 900 */
+    --foreground: #f1f5f9;
+    /* Slate 100 */
+    --muted: #94a3b8;
+    /* Slate 400 */
+    --muted-foreground: #cbd5e1;
+    /* Slate 300 */
+    --light: #1e293b;
+    /* Slate 800 */
+    --dark: #f8fafc;
+    /* Slate 50 */
+    --border: #334155;
+    /* Slate 700 */
+    --border-hover: #475569;
+    /* Slate 600 */
+
+    /* Adjust primary for dark mode */
+    --primary: #3b82f6;
+    /* Brighter blue for dark backgrounds */
+    --primary-hover: #60a5fa;
+    /* Blue 400 */
+    --primary-light: #1e3a8a;
+    /* Blue 900 */
   }
 }
 
@@ -14,29 +85,343 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-poppins), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+/* Typography with better contrast */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 3rem;
+  /* 48px */
+}
+
+h2 {
+  font-size: 2.25rem;
+  /* 36px */
+}
+
+h3 {
+  font-size: 1.875rem;
+  /* 30px */
+}
+
+h4 {
+  font-size: 1.5rem;
+  /* 24px */
+}
+
+h5 {
+  font-size: 1.25rem;
+  /* 20px */
+}
+
+h6 {
+  font-size: 1rem;
+  /* 16px */
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+p {
+  color: var(--muted-foreground);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.lead {
+  font-size: 1.125rem;
+  /* 18px */
+  color: var(--muted-foreground);
+  line-height: 1.7;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+/* Utility Classes with improved contrast */
+.text-primary-custom {
+  color: var(--primary) !important;
+}
+
+.text-accent {
+  color: var(--accent) !important;
+}
+
+.bg-primary-custom {
+  background-color: var(--primary) !important;
+  color: white !important;
+}
+
+.bg-light-custom {
+  background-color: var(--light) !important;
+}
+
+/* Buttons with better hover states */
+.btn-primary-custom {
+  background-color: var(--primary);
+  border: 2px solid var(--primary);
+  color: white;
+  padding: 0.875rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+}
+
+.btn-primary-custom:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+  color: white;
+}
+
+.btn-primary-custom:active {
+  transform: translateY(0);
+}
+
+.btn-outline-primary {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Glass Panel with better contrast */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(229, 231, 235, 0.8);
+  box-shadow: var(--shadow-xl);
 }
 
 @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+  .glass-panel {
+    background: rgba(30, 41, 59, 0.95);
+    border: 1px solid rgba(71, 85, 105, 0.5);
+  }
+}
+
+/* Card Hover Effects */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--background);
+  box-shadow: var(--shadow-md);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--primary-light);
+}
+
+/* Contact Section */
+#contact {
+  background: linear-gradient(rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.9)), url(/images/map.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+}
+
+
+
+/* Removed the conflicting !important rules to allow inline styles to work */
+
+
+/* Footer */
+#footer {
+  background-color: var(--light) !important;
+  border-top: 1px solid var(--border);
+}
+
+#footer h5 {
+  color: var(--foreground) !important;
+  font-size: 1.125rem;
+  margin-bottom: 1.25rem;
+}
+
+#footer ul li a {
+  color: var(--muted-foreground);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+#footer ul li a:hover {
+  color: var(--primary);
+  text-decoration: none;
+  padding-left: 8px;
+}
+
+#footer .small {
+  color: var(--muted) !important;
+}
+
+/* Section backgrounds with proper contrast */
+.bg-light {
+  background-color: var(--light) !important;
+}
+
+.bg-light h1,
+.bg-light h2,
+.bg-light h3,
+.bg-light h4,
+.bg-light h5,
+.bg-light h6 {
+  color: var(--foreground) !important;
+}
+
+.bg-light p,
+.bg-light .lead {
+  color: var(--muted-foreground) !important;
+}
+
+.bg-light .text-muted {
+  color: var(--muted) !important;
+}
+
+/* Form Controls */
+.form-control {
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  outline: none;
+}
+
+.form-control::placeholder {
+  color: var(--muted);
+}
+
+.form-label {
+  color: var(--foreground);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Navbar enhancements */
+.navbar {
+  transition: all 0.3s ease;
+}
+
+.navbar .nav-link {
+  color: var(--foreground);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: var(--primary);
+}
+
+/* Letter spacing utility */
+.letter-spacing-2 {
+  letter-spacing: 0.1em;
+}
+
+/* Text color utilities for better readability */
+.text-muted {
+  color: var(--muted) !important;
+}
+
+.text-white-50 {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+/* Hover effects for social icons */
+.hover-primary:hover {
+  color: var(--primary) !important;
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* Accessibility improvements */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Smooth transitions */
+* {
+  transition-property: color, background-color, border-color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  h2 {
+    font-size: 1.875rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .display-3 {
+    font-size: 2.5rem !important;
+  }
+
+  .display-5 {
+    font-size: 2rem !important;
   }
 }
